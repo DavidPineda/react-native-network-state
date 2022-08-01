@@ -17,6 +17,12 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     compileSdkVersion rootProject.hasProperty('compileSdkVersion') ? rootProject.compileSdkVersion : DEFAULT_COMPILE_SDK_VERSION
     buildToolsVersion rootProject.hasProperty('buildToolsVersion') ? rootProject.buildToolsVersion : DEFAULT_BUILD_TOOLS_VERSION
 
@@ -39,4 +45,7 @@ repositories {
 dependencies {
     compile 'com.github.pwittchen:reactivenetwork-rx2:2.1.0'
     compile 'com.facebook.react:react-native:+'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core:1.1.0'
+    implementation 'androidx.annotation:annotation:1.0.2'
 }
