@@ -109,7 +109,7 @@ public class RNNetworkModule extends ReactContextBaseJavaModule {
         return constants;
     }
 
-    private void sendEvent(String eventName, @Nullable WritableMap params) {
+    private void sendEvent(String eventName, @NonNull WritableMap params) {
         if (mContext == null || !mContext.hasActiveCatalystInstance()) {
             return;
         }
